@@ -9,7 +9,7 @@ public class Advent3_1 {
     private final Boolean[][] symbArray = new Boolean[MAX_ROWS][MAX_CHARS];
 
     public void execute(){
-        System.out.println("= Advent 2_2 Executing");
+        System.out.println("= Advent 3_1 Executing");
         clearSymbols();
 
         // First work out where the symbols are and store in symbArray

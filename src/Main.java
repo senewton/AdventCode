@@ -22,8 +22,10 @@ public class Main {
         advent3_2.execute(); */
 
         /* Day 4 */
-        Advent4_1 advent4_1 = new Advent4_1();
-        advent4_1.execute();
+        /* Advent4_1 advent4_1 = new Advent4_1();
+        advent4_1.execute(); */
+        Advent4_2 advent4_2 = new Advent4_2();
+        advent4_2.execute();
 
     }
 }

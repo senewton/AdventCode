@@ -11,7 +11,7 @@ public class Advent3_2 {
     private final Character[][] charArray = new Character[MAX_ROWS][MAX_CHARS];
 
     public void execute(){
-        System.out.println("= Advent 2_2 Executing");
+        System.out.println("= Advent 3_2 Executing");
         clearSymbols();
 
         // First work out where the star symbols are and store in symbArray

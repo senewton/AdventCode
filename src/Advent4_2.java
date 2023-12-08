@@ -6,10 +6,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class Advent4_1 {
-    public void execute(){
-        System.out.println("= Advent 4_1 Executing");
-        Integer totalSum = 0;
+public class Advent4_2 {
+    public void execute() {
+        System.out.println("= Advent 4_2 Executing");
+
+        final Integer MAX_ROWS = 202;
+        final Integer[] cardCount = new Integer[MAX_ROWS];
+
+        for(int i = 0; i < MAX_ROWS; i++){
+            cardCount[i] = 1;  // One of each card
+        }
 
         try {
             InputStream inputStream = new FileInputStream("c:/home/code/Java/AdventCode/data/adv4.txt");
@@ -18,19 +24,27 @@ public class Advent4_1 {
             Integer rowCounter = 0;
             while (sc.hasNext()) {
                 String str = sc.nextLine();
-                totalSum += getScore(str);
+                Integer noCardsWon = getWinningCards(str);
+                Integer countOfThisCard = cardCount[rowCounter];
 
+                for(int j = 0; j < noCardsWon; j++ ){
+                    cardCount[rowCounter+1+j] += countOfThisCard;
+                }
                 rowCounter++;
             }
 
-        } catch(FileNotFoundException fnfe) {
+        } catch (FileNotFoundException fnfe) {
             System.out.println(fnfe.getMessage());
+        }
+
+        Integer totalSum = 0;
+        for(int i = 0; i < MAX_ROWS; i++){
+            totalSum += cardCount[i] ;
         }
         System.out.println("Total Score:" + totalSum);
     }
 
-    private int getScore(String str){
-        Integer score = 0;
+    private int getWinningCards(String str){
 
         // Lose the prefix
         str = str.substring(str.indexOf(':')+1, str.length());
@@ -67,13 +81,6 @@ public class Advent4_1 {
         }
         System.out.println("Number of winning scores:" + winningNumbers);
 
-        for(Integer i = 0; i < winningNumbers; i++){
-            if(i.equals(0)){
-                score = 1;
-            } else{
-                score = score*2;
-            }
-        }
-        return score;
+        return winningNumbers;
     }
 }
