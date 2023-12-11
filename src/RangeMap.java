@@ -54,7 +54,7 @@ public class RangeMap {
     }
 
     public Long getMap(Long longKey){
-        System.out.println("Looking for key:" + longKey );
+        // System.out.println("Looking for key:" + longKey );
 
         for(int i = 0; i < this.rangeData.size(); i++){
             RangeRecord rr = this.rangeData.get(i);

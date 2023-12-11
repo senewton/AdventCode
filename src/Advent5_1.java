@@ -1,5 +1,3 @@
-
-
 public class Advent5_1 {
 
     private long[] seedArray = new long[]{
