@@ -8,7 +8,6 @@ public class Main {
         Advent1_2 advent1_2 = new Advent1_2();
         advent1_2.execute();*/
 
-
         /* Day 2 */
         /* Advent2_1 advent2_1 = new Advent2_1();
         advent2_1.execute();
@@ -23,9 +22,16 @@ public class Main {
 
         /* Day 4 */
         /* Advent4_1 advent4_1 = new Advent4_1();
-        advent4_1.execute(); */
+        advent4_1.execute();
         Advent4_2 advent4_2 = new Advent4_2();
-        advent4_2.execute();
+        advent4_2.execute(); */
+
+        /* Day 5 */
+        /* Advent5_1 advent5_1 = new Advent5_1();
+        advent5_1.execute(); */
+        Advent5_2 advent5_2 = new Advent5_2();
+        advent5_2.execute();
+
 
     }
 }
