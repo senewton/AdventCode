@@ -39,23 +39,6 @@ public class Advent6_2 {
         return numWaysWinning;
     }
 
-    /* private Double getDistanceCovered(Double raceTime, Double buttonMs){
-        Double distCovered = 0.0;
-        Double startSpeed = 0.0;
-
-        for(Double i = 0.0; i < raceTime; i++){
-
-            if(i < buttonMs){
-                startSpeed += 1;
-            } else{
-                distCovered += startSpeed;
-            }
-        }
-        // System.out.println("RaceTime:" + raceTime + " ButtonMs" + buttonMs + " DistCovered:" + distCovered);
-
-        return distCovered;
-    }*/
-
     private Double getDistanceCovered(Double raceTime, Double buttonMs){
         Double distCovered = 0.0;
 
