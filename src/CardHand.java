@@ -8,6 +8,7 @@ public class CardHand implements Comparable<CardHand>{
     CardHand(String input, Integer bidValue, ScoreCard type) {
         this.contents = input;
         this.bidValue = bidValue;
+        this.type = type;
 
         transformed = contents;
         transform();
@@ -26,7 +27,7 @@ public class CardHand implements Comparable<CardHand>{
         transformed = transformed.replaceAll("A", "a");
         transformed = transformed.replaceAll("K", "b");
         transformed = transformed.replaceAll("Q", "c");
-        transformed = transformed.replaceAll("J", "d");
+        transformed = transformed.replaceAll("J", "n"); // Changed from d for 7_2
         transformed = transformed.replaceAll("T", "e");
         transformed = transformed.replaceAll("9", "f");
         transformed = transformed.replaceAll("8", "g");
