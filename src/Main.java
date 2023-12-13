@@ -33,10 +33,14 @@ public class Main {
         advent5_2.execute();*/
 
         /* Day 6 */
-        Advent6_1 advent6_1 = new Advent6_1();
+        /* Advent6_1 advent6_1 = new Advent6_1();
         advent6_1.execute();
         Advent6_2 advent6_2 = new Advent6_2();
-        advent6_2.execute();
+        advent6_2.execute();*/
+
+        /* Day 7 */
+        Advent7_1 advent7_1 = new Advent7_1();
+        advent7_1.execute();
 
     }
 }
