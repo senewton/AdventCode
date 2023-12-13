@@ -3,17 +3,6 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.*;
 
-enum ScoreCard {
-    FIVE_KIND,
-    FOUR_KIND,
-    FULL_HOUSE,
-    THREE_KIND,
-    TWO_PAIR,
-    ONE_PAIR,
-    HIGH_CARD
-};
-
-
 public class Advent7_1 {
     private ArrayList<CardHand> rankedList = new ArrayList<>();
     public void execute(){
