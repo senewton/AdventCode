@@ -40,9 +40,15 @@ public class Main {
 
         /* Day 7 */
         /* Advent7_1 advent7_1 = new Advent7_1();
-        advent7_1.execute(); */
+        advent7_1.execute();
         Advent7_2 advent7_2 = new Advent7_2();
-        advent7_2.execute();
+        advent7_2.execute(); */
+
+        /* Day 8 */
+        /* Advent8_1 advent8_1 = new Advent8_1();
+        advent8_1.execute(); */
+        Advent8_2 advent8_2 = new Advent8_2();
+        advent8_2.execute();
 
     }
 }
