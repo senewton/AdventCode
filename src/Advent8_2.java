@@ -38,8 +38,8 @@ public class Advent8_2 {
             this.cycles = new int[this.nodes.size()];
 
             findCycles();
-
-            System.out.println(LeastCommonMultiple.LCM(this.cycles, this.cycles.length));
+            long lcmCycleLengths = LeastCommonMultiple.LCM(this.cycles, this.cycles.length);
+            System.out.println("** Least Common Multiple of Cycle Lengths = " + lcmCycleLengths );
 
         } catch(FileNotFoundException fnfe) {
             System.out.println(fnfe.getMessage());
@@ -53,7 +53,7 @@ public class Advent8_2 {
         for(int i = 0; i < this.nodes.size(); i++ ){
             String startNode = this.nodes.get(i);
             int cycle = findRoute(startNode);
-            System.out.println("Node:" + startNode + " Cycle Length:" + cycle);
+            System.out.println("Start Node: " + startNode + " :Cycle Length: " + cycle);
             this.cycles[i] = cycle;
         }
     }
@@ -66,7 +66,7 @@ public class Advent8_2 {
         // Find the record containing a key "AAA"
         ArrayList<String> dirRec;
         dirRec = this.directions.get(startNode);
-        System.out.println("Found Start:" + dirRec.get(0) + "," + dirRec.get(1) );
+        // System.out.println("Found Start:" + dirRec.get(0) + "," + dirRec.get(1) );
 
         while(!isZNode){
 
@@ -90,7 +90,7 @@ public class Advent8_2 {
                 isZNode = Boolean.TRUE;
             }
         }
-        System.out.println("Pos:" + pos + " NTEPS:" + numSteps);
+        // System.out.println("Pos:" + pos + " NTEPS:" + numSteps);
         return numSteps.intValue();
     }
 
@@ -111,7 +111,7 @@ public class Advent8_2 {
     private void findStartNodes(){
         for(String node: this.directions.keySet()){
             if(isStart(node)){
-                System.out.println("Start Node:" + node);
+                // System.out.println("Start Node:" + node);
                 this.nodes.add(node);
             }
         }
